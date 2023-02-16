@@ -22,7 +22,8 @@ mypy = "^1.0.0"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-# [tool.mypy]
+[tool.mypy]
+exclude = ['.venv', 'venv']
 # plugins = ["mypy_django_plugin.main"]
 #
 # [tool.django-stubs]

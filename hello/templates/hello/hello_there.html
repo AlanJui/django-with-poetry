@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Hello, Django</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- <link href="css/style.css" rel="stylesheet"> -->
+</head>
+
+<body>
+	<strong>Hello there, {{name}}!</strong>
+	It's {{ date |date:"l, d F, Y" }} at {{ date | time:"H:i:s" }}.
+</body>
+
+</html>
