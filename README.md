@@ -48,7 +48,7 @@
     Spawning shell within /Users/alanjui/workspace/django/ex-2023-02/.venv
     ❯ emulate bash -c '. /Users/alanjui/workspace/django/ex-2023-02/.venv/bin/activate'
 
-**(\*\***3)\*\*
+**(3)**
 
     ❯ poetry add django
     Using version ^4.1.7 for django
@@ -100,7 +100,7 @@
     requires = ["poetry-core"]
     build-backend = "poetry.core.masonry.api"
 
-**(\*\***4)\*\*
+**(4)**
 
     ❯ django-admin startproject web_app .
 
