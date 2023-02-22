@@ -8,13 +8,14 @@ from hello.models import LogMessage
 
 class HomeListView(ListView):
     model = LogMessage
-    template_name = 'hello/home.html'
+    template_name = "hello/home.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
 
-def log_message(request):   # pylint: disable=R1710
+
+def log_message(request):  # pylint: disable=R1710
     form = LogMessageForm(request.POST or None)
 
     if request.method == "POST":
@@ -22,18 +23,20 @@ def log_message(request):   # pylint: disable=R1710
             message = form.save(commit=False)
             message.log_date = datetime.now()
             message.save()
-            return redirect('home')
+            return redirect("home")
     else:
         return render(
             request,
-            'hello/log_message.html',
+            "hello/log_message.html",
             {
-                'form': form,
-            }
+                "form": form,
+            },
         )
 
+
 def about(request):
-    return render(request, 'hello/about.html')
+    return render(request, "hello/about.html")
+
 
 def contact(request):
-    return render(request, 'hello/contact.html')
+    return render(request, "hello/contact.html")

@@ -9,6 +9,7 @@ packages = [{include = "ex_2023_01"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 django = "^4.1.7"
+django-stubs = "^1.14.0"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -23,7 +24,10 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.mypy]
 exclude = ['.venv', 'venv']
-# plugins = ["mypy_django_plugin.main"]
+
+[mypy.plugins.django-stubs]
+django_settings_module = "web_app.settings"
+
 #
 # [tool.django-stubs]
 # django_settings_module = "web_app.settings"
